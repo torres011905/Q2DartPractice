@@ -1,0 +1,22 @@
+void main() {
+  double balance = 1000.0;
+  double amount = 250.0;
+
+  print('=== Welcome to Simple ATM ===');
+  print('Current operation: Deposit');
+
+  double deposit(double currentBalance, double amount) {
+    if (amount > 0) {
+      double newBalance = currentBalance + amount;
+      print('Deposited: ₱${amount.toStringAsFixed(2)}');
+      print('New Balance: ₱${newBalance.toStringAsFixed(2)}');
+      print('Final Balance: ₱${newBalance.toStringAsFixed(2)}');
+      return newBalance;
+    } else {
+      print('Invalid deposit amount. Must be greater than 0.');
+      return currentBalance;
+    }
+  }
+
+  balance = deposit(balance, amount); 
+}
