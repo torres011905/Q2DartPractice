@@ -1,0 +1,29 @@
+void main() {
+  double test1 = 85.5;
+  double test2 = 92.0;
+  double test3 = 78.5;
+
+  double average = (test1 + test2 + test3) / 3;
+  
+  String status = average >= 60 ? 'PASSED! 🎉' : 'FAILED';
+
+  String letterGrade;
+  if (average >= 90) {
+    letterGrade = 'A';
+  } else if (average >= 80) {
+    letterGrade = 'B';
+  } else if (average >= 70) {
+    letterGrade = 'C';
+  } else if (average >= 60) {
+    letterGrade = 'D';
+  } else {
+    letterGrade = 'F';
+  }
+
+  print('Test 1: $test1');
+  print('Test 2: $test2');
+  print('Test 3: $test3');
+  print('Average Grade: ${average.toStringAsFixed(2)}');
+  print('Status: $status');
+  print('Letter Grade: $letterGrade');
+}
